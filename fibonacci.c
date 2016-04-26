@@ -6,7 +6,7 @@ void main(){
 
 
 int menu = 9;
-int valor = 0;
+int j = 0;
 int interacoes = 0;
 
 system("clear");
@@ -33,13 +33,14 @@ printf("\t[0] SAIR DO PROGRAMA\n");
 printf("\t[] SUA ESCOLHA: "); scanf("%d",&menu);
 
 system("clear");
-printf("\tNÚMERO DE INTERAÇÕES: "); scanf("%d",&interacoes);
-system("clear");
 
 
 		if(menu==1){
+                        
+			printf("\tNÚMERO DE INTERAÇÕES: "); scanf("%d",&interacoes);
+			system("clear");
 
-			int vetorValores[interacoes];
+			unsigned long int vetorValores[interacoes];
 
 			int i = 0;
 
@@ -65,7 +66,7 @@ system("clear");
 									i++;
 					}
 
-		}
+		
 
 
 printf("\t#===================================================#");
@@ -73,15 +74,21 @@ printf("\n");
 printf("\n");
 printf("\t IMPRESSÃO DOS RESULTADOS: \n\n");
 
+
+
 for(j=0;j<interacoes;j++){
 
-printf("%d\t", vetorValores[j]);
+if(j==0) printf("\t");
+printf("%lu\t", vetorValores[j]);
+if((j%5)==0) printf("\n\t");
 
 }
 
 printf("\n");
 printf("\n");
-printf("\t#===================================================#");
+
+
+}
 
 }while(menu!=0);
 
